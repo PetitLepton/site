@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Resume">
+        <meta name="author" content="Flavien Lambert">
+        <link rel="stylesheet" href="resume-flat.css">
+        <script src="resume-flat.js"></script>
+    </head>
+
+    <body>
+
+        <header id="wholeHeader">
+            <section id="largeHeader">
+                <h1>Flavien Lambert</h1>
+            </section>
+
+            <ul id="headerTabs">
+                <li id="1" onmouseover="highlight(this.id)" onmouseout="noHighlight(this.id)" onclick="displayContent(this.id)">explore</li><li id="2" onmouseover="highlight(this.id)" onmouseout="noHighlight(this.id)" onclick="displayContent(this.id)">learn</li><li id="3" onmouseover="highlight(this.id)" onmouseout="noHighlight(this.id)" onclick="displayContent(this.id)">share</li><li id="4" class="last" onmouseover="highlight(this.id)" onmouseout="noHighlight(this.id)" onclick="displayContent(this.id)">exchange</li>
+            </ul>
+        </header>
+
+        <main id="main">
+
+            <section id = "s1">
+                <header id="piktochart" onclick="displayArticle(this.id)">
+                    <p>(data) scientist</p>
+                    <p>Piktochart Sdn Bhd</p>
+                    <p>August 2015 - Present</p>
+                </header>
+                <article id="a-piktochart">
+                    <p>My current position in Piktochart, data scientist, makes me help several teams of the company as diverse as the design and UI/UX - through the analysis of visuals created by users -, the marketing - by providing insights into customer behaviour - as well as the general management - by grounding or dismissing assumptions on customer journeys.</p>
+                    <p>From a technical perspective, although my everyday-tool stays Python and the related analysis libraries, the interaction with Backend technologies allowed me to extend my knowldege on both SQL and noSQL databases.</p>
+                </article>
+
+                <header id="smart" onclick="displayArticle(this.id)">
+                    <p>postdoctoral associate</p>
+                    <p>Singapore MIT Alliance for R.& T.</p>
+                    <p>January 2014 - July 2015</p>
+                </header>
+                <article id="a-smart">
+                    <p>My involvement during this postdoctoral period covered different topics, from social network analysis to transportation optimization.</p>
+                    <p>My first assignment at SMART and the Senseable city Lab was related to a collaboration with the Coca Cola company. I analysed the consumer behaviors through purchase records provided by vending machines, called freestyle, highlighting both general cyclic trends across the USA as well as a few exotic locations. The visualisation of the results, developed in collaboration with my colleagues in Boston, can be found on <a href="http://senseable.mit.edu/ccfs/">Drinking Data</a>.</p>
+                    <p>My major research topic was related to transportation and Urban Planning. I developed a basic mathematical framework to include in the core of the planning the transportation infrastructure. The modeling was implemented in a Python optimization tool (using scipy and cvxpy for the convex programming). Input parameters for Singapore were extracted from both the analysis of 3.5M customers of the public network and the mobility patterns of SingTel customers. These parameters were used to build networks, studied thanks to the Python library <a href="https://graph-tool.skewed.de/">Graph-tool</a>. This work is an on-going collaboration with the Urban Redeployment Agency in Singapore.</p>
+                    <p>My last subject of exploration is the evaluation of merging anonymized data sets. I implemented and tested an algorithm to match anonymous cell phone users across different data sets through both a clustering of the locations and an optimization of the matching criteria (simple random tree). Data were processed thanks to the Python tools pandas and scikit-learn.</p>
+                </article>
+
+                <header id="travel" onclick="displayArticle(this.id)">
+                    <p>traveller</p>
+                    <p>South East Asia</p>
+                    <p>January 2013 - August 2013</p>
+                </header>
+                <article id="a-travel">
+                    <p>I <a href="http://www.petitlepton.tumblr.com">travelled</a> for seven months through a part of South East Asia, namely Thailand, Laos, Cambodia and Indonesia, almost exclusively by land (I did not swim to Indonesia though...).</p>
+                </article>
+
+                <header id="cea" onclick="displayArticle(this.id)">
+                    <p>researcher</p>
+                    <p>French Atomic Energy Commission</p>
+                    <p>January 2008 - December 2012</p>
+                </header>
+                <article id="a-cea">
+                    <p>My team was dedicated to the design of large scale LASER experiments on facilities both in France and the USA. I performed radiative hydrodynamics simulations for several projects, including the complete design of a small scale experiment ran in France. With my backgroound in microscopic physics and material science - for example, equations of state -, I also served as a consultant for my team regarding these issues.</p>
+                    <p>In parallel to this main task, I went on with my collaborations on computing the microscopic properties of warm dense matter with the framework and the code elaborated during my PhD period.</p>
+                </article>
+            </section>
+
+            <section id = "s2">
+
+                <header id="phd" onclick="displayArticle(this.id)">
+                    <p>Doctorate</p>
+                    <p>University of Paris</p>
+                    <p>October 2004 - July 2007</p>
+                </header>
+                <article id="a-phd">
+                    <p>The topic of these two and a half years was the microscopic physics of hot and dense plasmas, matter state typically encountered in the centre of  the sun or in megaJoule LASER experiments.</p>
+                    <p>We described plasmas as a mixture of electrons and nuclei interacting dynamically. The electronic component was treated with a semiclassical flavour of Density Functional Theory, a quantum description, called Orbital Free whereas the nuclei were described as classical entities and propagated through molecular dynamics with forces arising from both electronic and nuclear components.</p>
+                    <p>The whole framework has been implemented in a parallel code written in Fortran which is routinely used on HPC machines - on a few thousands of processors - both at the French Atomic Energy Commission and the Los Alamos National Laboratory.</p>
+                </article>
+
+                <header id="dea" onclick="displayArticle(this.id)">
+                    <p>Master's degree</p>
+                    <p>University of Paris</p>
+                    <p>October 2003 - July 2004</p>
+                </header>
+                <article id="a-dea">
+                    <p>The master's program was multi-disciplinary, focusing on complex systems in various fields ranging from particle physics to biology. I chose to explore more thoroughly the physics of the nucleus, digging into methods and techniques used in many-body physics.</p>
+                </article>
+
+                <header id="mines" onclick="displayArticle(this.id)">
+                    <p>Master's degree</p>
+                    <p>Mines ParisTech</p>
+                    <p>October 2000 - July 2003</p>
+                </header>
+                <article id="a-mines">
+                    <p>French <a href="http://www.mines-paristech.eu/Prospective-student/Master-Degree/Master-Degree-in-Science-and-Executive-Engineering/Presentation/">engineering schools</a> have a very diverse program, including hard sciences - mathematics, statistics, computer science and various fields of physics - as well as soft ones - social sciences, economics. During this three-year education, I particularly studied nuclear engineering with an emphasis on neutronics and simulations.</p>
+                </article>
+
+            </section>
+
+            <section id = "s3">
+                <header id="teaching" onclick="displayArticle(this.id)">
+                    <p>volunteering and teaching</p>
+                </header>
+                <article id="a-teaching">
+                    <p>During my trip, I taught basic notions of English to kids in the <a href="http://www.chdcambodia.org">Cambodian countryside</a> near Takeo in June 2013</p>
+                    <p>From 2008 to 2012, I gave lectures on quantum and statistical physics to graduate students at Mines ParisTech.</p>
+                    <p>In the meantime, during 2011, I conducted an introductory course on plasma physics at the University of Paris.</p>
+                    <p>My first involvement in teaching was lectures on various fields of physics given to undergraduate students at Lycée Buffon (France) between 2006 to 2011</p>
+                </article>
+
+                <header id="achievements" onclick="displayArticle(this.id)">
+                    <p>scientific achievements</p>
+                </header>
+                <article id="a-achievements">
+                    <p>My different research topics lead to the publication of <a href="http://scholar.google.fr/citations?hl=en&user=vMe_um8AAAAJ">eleven articles </a> in peer-reviewed journals and six presentations in international conferences (two invited).</p>
+                    <p>I also organised two physics <a href="http://www.cecam.org/workshop-0-763.html">workshops</a> in Paris, in 2011 and 2012, and wrote with colleagues a chapter of a <a href="http://www.worldscientific.com/worldscibooks/10.1142/8633">book</a> related to the field of my PhD.</p>
+                </article>
+            </section>
+
+            <section id = "s4">
+                <article class="visible">
+                    <p>We can discuss in French, my mother language, or English if you do not mind the world-famous French accent (although I am working on that). Since my German is unfortunately rusty and my Polish is brand new, it will require patience for getting to the point.</p>
+                    <p>Language is one form of exchange but not the only one. Graphical design is an other in which I try to dig either personally or through the interaction with my colleagues designers  - this website is somehow a first attempt.</p>
+                    <p>The body is also a good medium which is why I practiced House dance for a couple of years. If you have never heard of it, you can take a look at a <a href="https://www.youtube.com/watch?v=ay0NAuB0cDI">demo</a> from my teacher in Paris.</p>
+                    </article>
+            </section>
+
+        </main>
+
+        <footer>
+            <section id ="footer">
+                <a class="email" href="mailto:petit (dot) lepton (at) gmail (dot) com" target="_top"></a>
+            </section>
+        </footer>
+
+    </body>
+
+</html>

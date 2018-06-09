@@ -1,0 +1,220 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+html{
+    /* mandatory for the fixed footer*/
+    position: relative;
+    min-height: 100%;
+
+    overflow-y: scroll;
+}
+body {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+
+    min-width: 40em;
+    margin: 0em auto;
+    margin-bottom: 4em;
+    /* this is mandatory for avoiding margin collapsing */
+    padding-top: 0.1px;
+    line-height: 1.45;
+
+    color: #455a64;
+    background-color: white;
+}
+
+header {
+    color : white; /* black; */
+    background-color: #5b7ba1; /* white; */
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
+
+    width: 100%;
+    min-width: 40em;
+    position: fixed;
+    z-index: 10;
+
+}
+    header > section {
+        text-align: center;
+
+        margin: 0pt;
+        padding : 1em 2.441em;
+
+        transition: background-color 0.25s ease;
+    }
+    header > section > h1 {
+        font-size: 2.441em;
+        font-weight: 500;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        margin: 0pt;
+        padding: 0pt;
+    }
+    header > ul {
+        font-family: 'Open Sans', 'Open Sans Condensed', 'Roboto Condensed';
+
+        margin: 0 auto;
+        /* there is an automatic padding linked with the bullets. Get rid of it*/
+        padding: 0pt;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    header > ul >li {
+        color: #cfd8dc;
+        background-color: inherit;
+        border-radius: 3px;
+        /*border: 1px solid #ffffff;*/
+
+        text-transform: uppercase;
+        transition: background-color 0.25s ease;
+
+        width: 8em;
+        margin: 0px 1em;
+        padding: 1ex;
+        display: inline-block;
+        text-align: center;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+
+        cursor: pointer;
+
+}
+    header > ul >li.last {
+    /* border-right: 1px solid #cfd8dc; */
+}
+
+main {
+    /*by fixed, the header does not exist. padding-top avoid being on top of it. It comes from the height of the header, inspected.*/
+    margin-top: 150px;
+}
+    main > section {
+
+        width: 40em;
+        max-height: 0ex;
+        margin: 0 auto;
+        padding: 0 1em;
+        display: block;
+        overflow: hidden;
+
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+    main > section > header {
+        color: white;
+        background-color: #5b7ba1;
+        border-radius: 3px;
+
+        width: 25em;
+        /* to be fixed because inherited from the main header*/
+        min-width: 25em;
+        margin: 1em 0em;
+
+        box-shadow: none;
+        transition: background-color 0.5s ease; /* box-shadow 0.25s ease; */
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+
+        position: relative;
+        z-index: 1;
+        padding: 1ex 1em;
+
+        overflow: hidden;
+
+        cursor: pointer;
+    }
+    main > section > header:hover {
+        background-color: #8CADDC;
+        /* box-shadow: 0px 4px 6px 0px rgba(91, 123, 161, 0.5); /* rgba(0, 0, 0, 0.5);*/
+    }
+    main > section > header > p {
+        font-size: 0.889em;
+        font-weight: 400;
+        font-family: 'Open Sans', 'Open Sans Condensed', 'Roboto Condensed';
+
+        margin: 0;
+        padding: 0;
+    }
+    main > section > header > p:first-child {
+        font-weight: 400;
+        font-family: 'Open Sans', 'Roboto';
+        text-transform: uppercase;
+        text-align: right;
+    }
+    main > section > article {
+        /* 40em / 0.79em = 50 glyphs */
+        font-size: 0.79em;
+        font-weight: 400;
+        border-left: 2px solid #cfd8dc;
+        max-height: 0ex;
+        transition: max-height 0.8s ease;
+
+        margin: 1em;
+        padding-left: 1em;
+        overflow: hidden;
+
+
+    }
+    main > section > article.visible {
+        border: none;
+        max-height: 800ex;
+    }
+
+
+
+footer {
+    font-weight: 300;
+    background-color: transparent;
+    /*box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.25);*/
+
+    height: 4em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+footer > section {
+    color: black;
+    width: 40em;
+    margin: 0em auto;
+
+    text-align: right;
+    padding: 0.5em 0em;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+a.email {
+    display: inline-block;
+    background-image: url("email.png");
+    background-color: #5b7ba1;
+    transition: background-color 0.25s ease;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+    transition: box-shadow ease 0.25s;
+
+    width: 3em;
+    height: 3em;
+    border-radius: 1.5em
+}
+a.email:hover{
+    /*background-color: #5B7BA1;*/
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+
+}
+a {
+    text-decoration: none;
+    color: #c21858;
+}

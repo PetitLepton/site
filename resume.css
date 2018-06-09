@@ -1,0 +1,196 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+html{
+    /* mandatory for the fixed footer*/
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    
+    min-width: 40em;
+    margin: 0em auto;
+    margin-bottom: 5ex;
+    /* this is mandatory for avoiding margin collapsing */
+    padding-top: 0.1px;
+    line-height: 1.45;
+    background-color: white;
+}
+
+header {
+    color : black;
+    background-color: white;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
+    
+    width: 100%;
+    min-width: 40em;
+    position: fixed;
+    z-index: 10;
+
+}
+    header > section {
+        text-align: center;
+        
+        margin: 0pt;
+        padding : 1em 2.441em;
+       
+        transition: background-color 0.25s ease;
+    }
+    header > section > h1 {
+        font-size: 2.441em;
+        font-weight: 500;
+    
+        text-transform: uppercase;
+        text-align: center;
+        
+        margin: 0pt;
+        padding: 0pt;
+    }
+    header > section > h2 {
+        font-size: 1em;
+        font-weight: 300;
+        
+        margin: 0pt;
+        padding: 0em 0em 0em 0em;
+    }
+    header > ul {
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+        margin: 0 auto;
+        /* there is an automatic padding linked with the bullets. Get rid of it*/
+        padding: 0pt;
+        text-align: center;
+    }
+    header > ul >li {
+        color: #cfd8dc;
+        background-color: white;
+        border-left: 1px solid #cfd8dc;
+
+        text-transform: uppercase;
+        transition: background-color 0.25s ease;
+        
+        width: 10em;
+        padding: 1ex;
+        display: inline-block;
+        text-align: center;
+        
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        
+        cursor: pointer;
+
+}
+    header > ul >li.last {
+    border-right: 1px solid #cfd8dc;
+}
+
+main {
+    /*by fixed, the header does not exist. padding-top avoid being on top of it. It comes from the height of the header, inspected.*/
+    margin-top: 140px;
+}
+    main > section {
+        
+        font-weight: 300;
+        
+        width: 40em;
+        max-height: 0ex;
+        margin: 0 auto;
+        padding: 0 1em;
+        display: block;
+        overflow: hidden;
+        
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+    main > section > header {
+        background-color: white; /*#eceff1;*/
+        border-top: 3px solid #455a64;
+        
+        width: 25em;
+        /* to be fixed because inherited from the main header*/
+        min-width: 25em;
+        margin: 1em 0em;
+        
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+        transition: box-shadow 0.25s ease;
+        
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        
+        position: relative;
+        z-index: 1;
+        padding: 1ex 1em;
+        
+        overflow: hidden;
+            
+        cursor: pointer;
+    }
+    main > section > header:hover {
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
+    }
+    main > section > header > p {
+        font-size: 0.889em;
+        font-weight: 300;
+        font-family: 'Roboto Condensed';
+        
+        margin: 0;
+        padding: 0;
+    }
+    main > section > header > p:first-child {
+        font-weight: 400;
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        text-align: right;
+    }
+    main > section > article {
+        /* 40em / 0.79em = 50 glyphs */
+        font-size: 0.79em;
+        
+        max-height: 0ex;
+        transition: max-height 0.8s ease;
+        
+        margin: 0em em;
+        
+        overflow: hidden;
+        
+
+    }
+    main > section > article.visible {  
+        max-height: 800ex;
+    }
+
+
+footer {
+    font-weight: 300;
+    background-color: white;
+    box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.25);
+
+    height: 5ex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+    overflow: hidden;
+
+    /*height: 2em;*/
+}
+footer > section {
+    color: black;
+    width: 40em;
+    margin: 0em auto;
+
+    text-align: right;
+    padding: 1ex 1em;
+    
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #c21858;
+}
